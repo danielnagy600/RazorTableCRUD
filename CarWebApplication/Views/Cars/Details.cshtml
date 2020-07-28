@@ -1,0 +1,66 @@
+﻿@model CarWebApplication.Models.CarModel
+
+@{ 
+    ViewData["Title"] = "Details";
+}
+
+<h2>Az autó részletes adatai</h2>
+
+<div>
+    <hr />
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModelName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModelName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstRegistration)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstRegistration.Year)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FuelType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FuelType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Transmission)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Transmission)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mileage)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mileage)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Colour)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Colour)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ModelID">Szerkesztés</a>
+    <a asp-action="Index">Vissza a listához</a>
+</div>
